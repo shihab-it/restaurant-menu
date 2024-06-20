@@ -3,16 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enter Your Mobile Number</title>
+    <title>Al Mina Restaurant Menu</title>
+    <style>
+        /* Basic styling for clarity */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .menu-container {
+            max-width: 800px;
+            margin: auto;
+        }
+        iframe {
+            width: 100%;
+            height: 600px; /* Adjust height as needed */
+            border: none; /* Remove iframe border */
+        }
+    </style>
 </head>
 <body>
-    <h2>Welcome to Al Mina Restaurant </h2>
-    <p>Please enter your mobile number to view our menu:</p>
-    <form action="https://form.jotform.com/241717129007452" method="POST">
-        <label for="mobile">Mobile Number:</label><br><br>
-        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
-        <br><br>
-        <input type="submit" value="Submit">
-    </form>
+    <div class="menu-container">
+        <h2>Welcome to Al Mina Restaurant</h2>
+        <p>Please enter your mobile number to view our menu:</p>
+
+        <!-- Embed Jetform HTML -->
+        <div id="jetform">
+            <script type="text/javascript" src="https://form.jotform.com/jsform/241717129007452"></script>
+        </div>
+    </div>
+
+    <!-- Embed PubHTML5 document -->
+    <iframe src="https://online.pubhtml5.com/mlwd/gunb/#p=6" title="Al Mina Restaurant Menu"></iframe>
+
+    <script>
+        // Function to handle form submission (if needed)
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('#jetform form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // Handle form submission logic here
+                alert('Thank you for submitting your mobile number.');
+                // Optionally, you can show the menu or perform other actions after form submission.
+            });
+        });
+    </script>
 </body>
 </html>
